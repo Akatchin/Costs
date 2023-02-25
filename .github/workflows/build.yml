@@ -4,11 +4,17 @@ on:
   push:
     branches:
       - main
+  pull_request:
+
 jobs:
   deploy:
     runs-on: ubuntu-22.04
+    permissions:
+      contents: write
+    concurrency: 
+      group: ${{ github.workflow }}-${{ github.ref }}
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - uses: actions/setup-node@v1
         with:
           node-version: '14.x'
@@ -16,8 +22,9 @@ jobs:
         run: |
           npm ci
           npm run build
-      - name: Deploy to gh-pages
+      - name: Deploy 
         uses: peaceiris/actions-gh-pages@v3
+        if: ${{ github.ref == 'refs/heads/main' }}
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build
+          publish_dir: ./public
