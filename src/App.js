@@ -6,7 +6,7 @@ import NewProject from './components/pages/newproject';
 import Container from './components/layout/container';
 import NavBar from './components/layout/navbar';
 import Footer from './components/layout/footer';
-import Project from './components/pages/project';
+import Projects from './components/pages/projects';
 
 function App() {
   return (
@@ -18,7 +18,7 @@ function App() {
           <Route path='/company' element={<Company/>}/>
           <Route path='/contact' element={<Contact/>}/>
           <Route path='/newproject' element={<NewProject/>}/>
-          <Route path='/project' element={<Project/>}/>
+          <Route path='/projects' element={<Projects/>}/>
         </Routes>
       </Container>
       <Footer/>
