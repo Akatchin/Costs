@@ -1,7 +1,7 @@
 import styles from "./projectForm.module.css"
 import Input from "../form/input"
 import Select from "../form/select"
-import SubmitBotton from "../form/submitBotton"
+import SubmitButton from "../form/submitButton"
 import {useEffect, useState} from "react"
 
 function ProjectForm ({handleSubmit, btnText,projectData}) {
@@ -67,7 +67,7 @@ function ProjectForm ({handleSubmit, btnText,projectData}) {
                 handleOnChange={handleCategory}
                 value={project.category ? project.category.id : ""}
                 />
-            <SubmitBotton text={btnText}/>
+            <SubmitButton text={btnText}/>
         </form>
     )
 }

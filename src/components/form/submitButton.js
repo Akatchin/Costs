@@ -1,6 +1,6 @@
-import styles from "./submitBotton.module.css"
+import styles from "./submitButton.module.css"
 
-function SubmitBotton({text}) {
+function SubmitButton({text}) {
     return (
         <div>
             <button className={styles.btn}>{text}</button>
@@ -8,4 +8,4 @@ function SubmitBotton({text}) {
     )
 }
 
-export default SubmitBotton
+export default SubmitButton
