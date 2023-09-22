@@ -1,6 +1,12 @@
+import Form from "./contact/form"
+import styles from "../components/contact/contactForm.module.css"
+
+
 function Contact() {
     return (
-        <h1>Contact</h1>
+        <div  className={styles.contact_Center}>
+            <Form/>
+        </div>
     )
 }
 
