@@ -15,7 +15,7 @@ function App() {
       <NavBar/>
       <Container customClass='min-height'>
         <Routes>
-          <Route path='/' element={<Home/>}/>
+          <Route path='/Costs' element={<Home/>}/>
           <Route path='/company' element={<Company/>}/>
           <Route path='/contact' element={<Contact/>}/>
           <Route path='/newproject' element={<NewProject/>}/>
