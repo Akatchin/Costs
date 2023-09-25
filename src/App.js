@@ -11,7 +11,7 @@ import Project from './components/pages/project';
 
 function App() {
   return (
-    <Router path="/" element={<Home/>}>
+    <Router path="/Costs" element={<Home/>}>
       <NavBar/>
       <Container customClass='min-height'>
         <Routes>
